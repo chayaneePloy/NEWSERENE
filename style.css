@@ -1,41 +1,51 @@
+html {
+    scroll-behavior: smooth;
+  }
 *{
     margin: 0;
     padding: 0;
 }
+
 /****Navigationbar*/
 #nav-bar
 {
+    background-image:linear-gradient(rgba(0,0, 0, 0.7),rgba(0, 0, 0, 0.2)) ;   
     position: sticky;
     top: 0;
-    z-index: 10;
-
+    width: 100%;
+    z-index: 9999!important;
+    
+}
+#nav-bar + .container {
+    padding-top: 80px;
 }
 .navbar-brand img{
     height: 80px;
-    padding-left:30px;
+    width: 150px;
+    padding-left:10px;
+    padding-right: 10px;
 }
 .navbar-nav li {
     padding: 0 10px;
 
 }
-.navbar-nav { /*ทำให้เมนูอยู่ข้างซ้าย เมือ่เป็นเมนูแบบ navbar*/
+
+.navbar-nav li a{ /*ทำให้เมนูอยู่ข้างซ้าย เมือ่เป็นเมนูแบบ navbar*/
     float: right;
     text-align: left;
      
 }
-#nav-bar  a:hover{
+#nav-bar ul li a:hover{
     color: #007Bff!important;
 }
-#navbarNavAltMarkup{
-    color: #000;
-}
-.navbar{
-    background: #ffffff;
-}
+
 .navbar-toggler{
     border: none!important;
 }
-
+.nav-link{
+    color: rgb(255, 255, 255)!important;
+    font-weight: 600;
+}
 /*------Slider------*/
 #slider{
     width: 100%;
@@ -49,8 +59,10 @@
     color: #ffffff;
     font-size: 42px;
 }
-
-/*about*/
+.carousel-inner{
+    height: 100vh;
+}
+/*-----------about--------------*/
 #about{
     padding-top: 20px;
 }
